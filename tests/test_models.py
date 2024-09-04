@@ -1,5 +1,6 @@
 # tests/test_models.py
 import pytest
+from src.pytemplate.domain/models import Operand
 
 
 # initialization should always set class fields to 0
