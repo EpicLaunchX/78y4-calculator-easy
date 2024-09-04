@@ -1,7 +1,8 @@
 # tests/test_models.py
+import pytest
+
 # imports must be sorted correctly
 from src.pytemplate.domain.models import Operand
-import pytest
 
 
 # initial values
