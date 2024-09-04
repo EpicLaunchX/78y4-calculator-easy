@@ -3,6 +3,6 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Operands():
+class Operand:
     first_operand: int
     second_operand: int
