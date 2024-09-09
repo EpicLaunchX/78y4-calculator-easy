@@ -3,14 +3,14 @@ from dataclasses import dataclass
 
 
 @dataclass
-class Operand:
-    # Proper init function to validate input
+class Operand():
+    # Init function just assigns value
     def __init__(self, first_operand: int, second_operand: int):
-        # Raises error if value is not an integer
-        if not isinstance(first_operand, int):
-            raise TypeError("first_operand must be an integer")
-        if not isinstance(second_operand, int):
-            raise TypeError("second_operand must be an integer")
-        # Assigns values to class object
         self.first_operand = first_operand
         self.second_operand = second_operand
+        
+    # SetAttr function performs type validation
+    def __setattr__(self, attr, value):
+        if not isinstance(value, int):
+            raise TypeError(f'{attr} must be type int')
+        super().__setattr__(attr, value)
