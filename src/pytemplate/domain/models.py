@@ -8,7 +8,7 @@ class Operand():
     def __init__(self, first_operand: int, second_operand: int):
         self.first_operand = first_operand
         self.second_operand = second_operand
-        
+
     # SetAttr function performs type validation
     def __setattr__(self, attr, value):
         if not isinstance(value, int):
